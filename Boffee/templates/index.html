@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>Order Your Coffee</title>
+</head>
+<body>
+    <div class="container">
+        
+        <img src="{{ url_for('static', filename='image/boffee.png') }}" alt="Coffee Shop Logo" width="200">
+        <h1>Welcome to Boffee!</h1>
+        <form method="POST">
+            <label>What drink size can I get for you?</label><br>
+            <input type="radio" name="size" value="Small" required> Small<br>
+            <input type="radio" name="size" value="Medium"> Medium<br>
+            <input type="radio" name="size" value="Large"> Large<br><br>
+
+            <label>What type of drink would you like?</label><br>
+            <input type="radio" name="drink_type" value="Brewed Coffee" required> Brewed Coffee<br>
+            <input type="radio" name="drink_type" value="Mocha"> Mocha<br>
+            <input type="radio" name="drink_type" value="Latte"> Latte<br><br>
+
+            <label>If Latte, choose your milk:</label><br>
+            <input type="radio" name="milk_type" value="a"> 2% milk<br>
+            <input type="radio" name="milk_type" value="b"> Non-fat milk<br>
+            <input type="radio" name="milk_type" value="c"> Soy milk<br><br>
+
+            <label>How would you like your drink?</label><br>
+            <input type="radio" name="temp" value="Hot" required> Hot<br>
+            <input type="radio" name="temp" value="Cold"> Cold<br><br>
+
+            <label>What would you like to use?</label><br>
+            <input type="radio" name="cup" value="Plastic cup" required> Plastic cup<br>
+            <input type="radio" name="cup" value="Reusable cup"> Reusable cup<br><br>
+
+            <label>Can I get your name please?</label><br>
+            <input type="text" name="name" required><br><br>
+
+            <button type="submit">Order Now</button>
+        </form>
+    </div>
+</body>
+</html>

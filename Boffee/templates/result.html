@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <title>Your Coffee Order</title>
+</head>
+    <body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='image/boffee.png') }}" alt="Coffee Shop Logo" width="200">
+        <h1>Thank you, {{ name }}!</h1>
+        <br>
+        <p>Your order:   a {{ size }} {{ temp }} {{ drink_type }} in a {{ cup }}.</p>
+        <br>
+        <p>Your drink will be ready shortly!</p>
+        <br>
+        <a class="button" href="/">Place Another Order</a>
+    </div>
+    </body>
+</html>
